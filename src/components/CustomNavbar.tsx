@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Wand2 } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 
 const CustomNavbar = () => {
   return (
@@ -17,9 +17,9 @@ const CustomNavbar = () => {
           <a href="/#benefits" className="nav-link">Benefits</a>
           <a href="/#story" className="nav-link">Our Story</a>
           <a href="/#contact" className="nav-link">Contact</a>
-          <Link to="/can-generator" className="nav-link flex items-center">
-            <Wand2 className="h-4 w-4 mr-1" />
-            Can Generator
+          <Link to="/cart" className="nav-link flex items-center">
+            <ShoppingCart className="h-4 w-4 mr-1" />
+            Cart
           </Link>
         </nav>
         

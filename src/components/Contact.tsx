@@ -1,9 +1,53 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import emailjs from '@emailjs/browser';
+import { useToast } from '@/hooks/use-toast';
+import { NEWSLETTER_TEMPLATE } from '@/lib/emailjs-templates';
 
 const Contact = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email) return;
+    
+    setIsSubmitting(true);
+    
+    try {
+      const { serviceId, templateId, publicKey } = NEWSLETTER_TEMPLATE;
+      
+      const templateParams = {
+        to_email: email,
+        to_name: email.split('@')[0], // Simple name extraction from email
+        message: 'Thank you for subscribing to our newsletter! Were excited to share exclusive offers and updates with you.'
+      };
+      
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      toast({
+        title: "Success!",
+        description: "Thank you for subscribing to our newsletter!",
+        variant: "default",
+      });
+      
+      setEmail('');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem subscribing you. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  
   return (
     <section id="contact" className="section">
       <div className="container-custom">
@@ -14,14 +58,22 @@ const Contact = () => {
               Join our newsletter for exclusive offers, new flavor alerts, and refreshing content.
             </p>
             
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <Input 
                 type="email" 
                 placeholder="Enter your email" 
                 className="flex-1 rounded-full" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <Button className="bg-coral hover:bg-coral/90 rounded-full">Subscribe</Button>
+              <Button 
+                type="submit" 
+                className="bg-coral hover:bg-coral/90 rounded-full"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+              </Button>
             </form>
             
             <p className="text-sm text-gray-500 mt-4">
