@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -9,15 +10,18 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-5xl md:text-7xl font-black mb-4 leading-tight">
-              Refreshingly <span className="text-coral">Different</span> Sparkling Water
+              <span className="text-coral">SWAY</span> Energy For Your Day
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-600 max-w-xl">
-              Made with real ingredients. Zero sugar. Full of flavor.
-              The perfect daily refreshment for the modern drinker.
+              Zero sugar. Full of flavor. Immunity boosting energy drinks that keep you going all day long.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button className="btn-primary text-lg py-6 px-8">Shop Now</Button>
-              <Button variant="outline" className="btn-outline text-lg py-6 px-8">Learn More</Button>
+              <Link to="/#products">
+                <Button className="btn-primary text-lg py-6 px-8">Shop Now</Button>
+              </Link>
+              <Link to="/#benefits">
+                <Button variant="outline" className="btn-outline text-lg py-6 px-8">Learn More</Button>
+              </Link>
             </div>
             <div className="mt-8 flex items-center justify-center md:justify-start gap-6">
               <div className="flex -space-x-4">
@@ -36,9 +40,10 @@ const Hero = () => {
               <div className="absolute bottom-[10%] left-[5%] w-40 h-40 rounded-full bg-yellow/30 blur-xl"></div>
               <div className="absolute top-[30%] right-[-5%] w-24 h-24 rounded-full bg-navy/20 blur-xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1613508636133-c15639e0bd11?q=80&w=1372&auto=format&fit=crop"
-                alt="Refreshing sparkling water can"
+                src="/lovable-uploads/224006f0-cd3a-4124-acc4-23bf3ab3946b.png"
+                alt="SWAY Cherry Energy Drink"
                 className="max-w-full h-auto object-contain mx-auto drop-shadow-2xl"
+                style={{ maxHeight: "500px" }}
               />
             </div>
           </div>

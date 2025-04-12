@@ -16,51 +16,51 @@ interface Product {
 const productData: Product[] = [
   {
     id: 1,
-    name: 'Citrus Burst',
-    description: 'A zesty blend of lemon, lime, and orange',
-    color: 'bg-yellow/10',
-    image: 'https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?q=80&w=1374&auto=format&fit=crop',
-    price: 3.99
+    name: 'SWAY Watermelon',
+    description: 'Refreshing watermelon flavor with energy boost',
+    color: 'bg-red-100',
+    image: '/lovable-uploads/87a9d84f-5bea-43c5-bb5b-e9940bb0bfcb.png',
+    price: 2.99
   },
   {
     id: 2,
-    name: 'Berry Bliss',
-    description: 'Sweet and tart mixed berries flavor',
-    color: 'bg-coral/10',
-    image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=1374&auto=format&fit=crop',
-    price: 3.99
+    name: 'SWAY Cherry',
+    description: 'Sweet cherry flavor with immunity boost',
+    color: 'bg-pink-100',
+    image: '/lovable-uploads/224006f0-cd3a-4124-acc4-23bf3ab3946b.png',
+    price: 2.99
   },
   {
     id: 3,
-    name: 'Cucumber Mint',
-    description: 'Cool and refreshing cucumber with a hint of mint',
-    color: 'bg-[#A1D6E2]/10',
-    image: 'https://images.unsplash.com/photo-1591735179859-a49991df5d56?q=80&w=1374&auto=format&fit=crop',
-    price: 3.99
+    name: 'SWAY Lemon Lime',
+    description: 'Zesty lemon lime flavor for refreshing energy',
+    color: 'bg-green-100',
+    image: '/lovable-uploads/d48e6b21-5040-4ac1-bdec-e522951d94c1.png',
+    price: 2.99
   },
   {
     id: 4,
-    name: 'Tropical Punch',
-    description: 'Exotic blend of pineapple, mango and passion fruit',
-    color: 'bg-[#F9A03F]/10',
-    image: 'https://images.unsplash.com/photo-1620882133512-5149956b1391?q=80&w=1374&auto=format&fit=crop',
-    price: 3.99
+    name: 'SWAY Mango',
+    description: 'Tropical mango flavor with natural energy',
+    color: 'bg-yellow-100',
+    image: '/lovable-uploads/38a97a84-1401-4821-92ae-de1c31db4ffb.png',
+    price: 2.99
   },
   {
     id: 5,
-    name: 'Peach Paradise',
-    description: 'Sweet peach and nectarine with a hint of honey',
-    color: 'bg-[#FFB347]/10',
-    image: 'https://images.unsplash.com/photo-1596803244618-8dbee441d70b?q=80&w=1374&auto=format&fit=crop',
-    price: 3.99
+    name: 'SWAY Orange',
+    description: 'Citrus orange flavor for daily energy boost',
+    color: 'bg-orange-100',
+    image: '/lovable-uploads/9b2df696-40a9-4ded-8867-86c461eb3b72.png',
+    price: 2.99
   },
   {
     id: 6,
-    name: 'Watermelon Wave',
-    description: 'Refreshing watermelon with a splash of lime',
-    color: 'bg-[#FF6B6B]/10',
-    image: 'https://images.unsplash.com/photo-1589734575451-5c4c3d91a494?q=80&w=1374&auto=format&fit=crop',
-    price: 3.99
+    name: 'SWAY Passion Fruit',
+    description: 'Exotic passion fruit flavor with immunity support',
+    color: 'bg-purple-100',
+    image: '/lovable-uploads/b3a0b83d-4f12-4602-9bae-e4a6958361a4.png',
+    price: 2.99
   }
 ];
 
@@ -139,9 +139,9 @@ const Products = () => {
     <section id="products" className="section bg-gray-50 py-16 md:py-24">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Discover Our Flavors</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">SWAY Energy Drinks</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Each flavor is carefully crafted using real ingredients, natural flavors, and zero added sugar.
+            Zero sugar, immunity boosting energy drinks with bold flavors and natural ingredients.
           </p>
         </div>
         
@@ -155,7 +155,7 @@ const Products = () => {
                 <img 
                   src={product.image} 
                   alt={product.name} 
-                  className="product-image h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="product-image h-auto max-h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
