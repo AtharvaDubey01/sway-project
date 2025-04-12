@@ -16,7 +16,7 @@ const reviewsData = [
     name: 'Amanda J.',
     location: 'New York, NY',
     rating: 5,
-    text: 'Best sparkling water I've ever tasted! The Cucumber Mint is my absolute favorite for hot summer days.',
+    text: "Best sparkling water I've ever tasted! The Cucumber Mint is my absolute favorite for hot summer days.",
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop',
   },
   {
@@ -40,7 +40,7 @@ const reviewsData = [
     name: 'David W.',
     location: 'Austin, TX',
     rating: 5,
-    text: 'I've cut out soda completely thanks to Refresh. The Tropical Punch flavor is incredible!',
+    text: "I've cut out soda completely thanks to Refresh. The Tropical Punch flavor is incredible!",
     image: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1374&auto=format&fit=crop',
   },
   {
