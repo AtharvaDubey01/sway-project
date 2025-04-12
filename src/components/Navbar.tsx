@@ -1,10 +1,25 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  // This would normally be handled with a global state management solution
+  // For demo purposes, we'll just listen for a custom event
+  useEffect(() => {
+    const handleCartUpdate = (e: CustomEvent) => {
+      setCartCount(e.detail.count);
+    };
+
+    window.addEventListener('cart-updated' as any, handleCartUpdate as any);
+
+    return () => {
+      window.removeEventListener('cart-updated' as any, handleCartUpdate as any);
+    };
+  }, []);
 
   return (
     <nav className="py-4 px-6 bg-cream sticky top-0 z-50">
@@ -16,6 +31,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <a href="#products" className="font-medium hover:text-coral transition-colors">Products</a>
           <a href="#benefits" className="font-medium hover:text-coral transition-colors">Benefits</a>
+          <a href="#learn-more" className="font-medium hover:text-coral transition-colors">Learn More</a>
+          <a href="#reviews" className="font-medium hover:text-coral transition-colors">Reviews</a>
           <a href="#story" className="font-medium hover:text-coral transition-colors">Our Story</a>
           <a href="#contact" className="font-medium hover:text-coral transition-colors">Contact</a>
         </div>
@@ -23,7 +40,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           <Button variant="ghost" size="icon" className="relative">
             <ShoppingBag className="h-6 w-6" />
-            <span className="absolute -top-1 -right-1 bg-coral text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            <span className="absolute -top-1 -right-1 bg-coral text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">{cartCount}</span>
           </Button>
           
           <Button className="bg-coral hover:bg-coral/90 hidden md:inline-flex">Shop Now</Button>
@@ -54,6 +71,20 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Benefits
+            </a>
+            <a 
+              href="#learn-more" 
+              className="font-medium py-2 px-4 hover:bg-coral/10 rounded-lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Learn More
+            </a>
+            <a 
+              href="#reviews" 
+              className="font-medium py-2 px-4 hover:bg-coral/10 rounded-lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Reviews
             </a>
             <a 
               href="#story" 
