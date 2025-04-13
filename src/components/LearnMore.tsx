@@ -1,7 +1,5 @@
-
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Leaf, Droplets, CheckCircle } from 'lucide-react';
+import { Leaf, Droplets, CheckCircle } from 'lucide-react';
 
 const LearnMore = () => {
   return (
@@ -50,13 +48,6 @@ const LearnMore = () => {
                   </p>
                 </div>
               </div>
-            </div>
-            
-            <div className="mt-8">
-              <Button className="bg-navy hover:bg-navy/90 group">
-                Learn About Our Process
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
             </div>
           </div>
           
