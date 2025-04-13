@@ -54,8 +54,8 @@ const Benefits = () => {
         <div className="mt-20 bg-coral/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2">
             <img 
-              src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=1374&auto=format&fit=crop" 
-              alt="Refresh drinks" 
+              src="/lovable-uploads/strawberry.jpg"
+              alt="Fresh strawberry ingredients" 
               className="rounded-2xl shadow-lg"
             />
           </div>
