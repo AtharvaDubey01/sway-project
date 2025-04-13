@@ -1,14 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart } from 'lucide-react';
-
 const CustomNavbar = () => {
-  return (
-    <header className="bg-white shadow-sm py-4">
+  return <header className="bg-white shadow-sm py-4">
       <div className="container-custom flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold text-navy">Refresh</span>
+          <span className="text-2xl font-bold text-navy">SWAY</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -31,8 +28,6 @@ const CustomNavbar = () => {
           </button>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default CustomNavbar;
