@@ -17,50 +17,50 @@ const productData: Product[] = [
   {
     id: 1,
     name: 'SWAY Watermelon',
-    description: 'Refreshing watermelon flavor with energy boost',
+    description: 'Refreshing watermelon flavor with natural energy boost',
     color: 'bg-red-100',
-    image: '/lovable-uploads/50d0cee4-da84-4300-bc39-e7d1f42d082a.png',
-    price: 2.99
+    image: '/lovable-uploads/WATERMELON.png',
+    price: 120
   },
   {
     id: 2,
     name: 'SWAY Cherry',
-    description: 'Sweet cherry flavor with immunity boost',
+    description: 'Sweet cherry flavor with immunity-boosting properties',
     color: 'bg-pink-100',
     image: '/lovable-uploads/224006f0-cd3a-4124-acc4-23bf3ab3946b.png',
-    price: 2.99
+    price: 120
   },
   {
     id: 3,
     name: 'SWAY Lemon Lime',
-    description: 'Zesty lemon lime flavor for refreshing energy',
+    description: 'Zesty lemon lime flavor for refreshing daily energy',
     color: 'bg-green-100',
-    image: '/lovable-uploads/bbd3ca53-50ce-45e5-9e6a-0ceffc361178.png',
-    price: 2.99
+    image: '/lovable-uploads/LEMONLIME.png',
+    price: 120
   },
   {
     id: 4,
     name: 'SWAY Mango',
-    description: 'Tropical mango flavor with natural energy',
+    description: 'Tropical mango flavor with natural energy ingredients',
     color: 'bg-yellow-100',
-    image: '/lovable-uploads/1d2920c5-40d1-430c-95e0-b0a39cfbb8ec.png',
-    price: 2.99
+    image: '/lovable-uploads/MANGO.png',
+    price: 120
   },
   {
     id: 5,
     name: 'SWAY Orange',
-    description: 'Citrus orange flavor for daily energy boost',
+    description: 'Citrus orange flavor for revitalizing energy boost',
     color: 'bg-orange-100',
-    image: '/lovable-uploads/da348ffd-6491-448e-9dc4-a1809deb54db.png',
-    price: 2.99
+    image: '/lovable-uploads/ORANGE.png',
+    price: 120
   },
   {
     id: 6,
     name: 'SWAY Passion Fruit',
-    description: 'Exotic passion fruit flavor with immunity support',
+    description: 'Exotic passion fruit flavor with immunity benefits',
     color: 'bg-purple-100',
-    image: '/lovable-uploads/d2e01409-7bc5-45e3-b1ee-cc25c54ef014.png',
-    price: 2.99
+    image: '/lovable-uploads/PASSIONFRUIT.png',
+    price: 120
   }
 ];
 
@@ -149,7 +149,7 @@ const Products = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
               <p className="text-gray-600 mb-2">{product.description}</p>
-              <p className="text-lg font-bold text-navy mb-4">${product.price.toFixed(2)}</p>
+              <p className="text-lg font-bold text-navy mb-4">₹{product.price}</p>
               <Button 
                 className="w-full bg-coral hover:bg-coral/90 transition-all duration-300"
                 onClick={() => addToCart(product)}

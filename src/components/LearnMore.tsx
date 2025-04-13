@@ -54,13 +54,13 @@ const LearnMore = () => {
           <div className="order-1 md:order-2 grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <img 
-                src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=1470&auto=format&fit=crop" 
-                alt="Fresh ingredients" 
+                src="/lovable-uploads/can factory.jpg" 
+                alt="Can Factory" 
                 className="rounded-2xl shadow-lg h-64 w-full object-cover"
               />
               <img 
-                src="https://images.unsplash.com/photo-1563899998-c17f4e7aa710?q=80&w=1364&auto=format&fit=crop" 
-                alt="Sustainable packaging" 
+                src="/lovable-uploads/no sugar.jpg" 
+                alt="No Sugar" 
                 className="rounded-2xl shadow-lg h-48 w-full object-cover"
               />
             </div>
@@ -71,7 +71,7 @@ const LearnMore = () => {
                 className="rounded-2xl shadow-lg h-48 w-full object-cover"
               />
               <img 
-                src="https://images.unsplash.com/photo-1597897429811-80feba073012?q=80&w=1510&auto=format&fit=crop" 
+                src="/lovable-uploads/oranges pic.jpg" 
                 alt="Refreshing drinks" 
                 className="rounded-2xl shadow-lg h-64 w-full object-cover"
               />
