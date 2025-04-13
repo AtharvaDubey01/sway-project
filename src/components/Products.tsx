@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart, CheckCircle } from 'lucide-react';
@@ -18,7 +19,7 @@ const productData: Product[] = [
     name: 'SWAY Watermelon',
     description: 'Refreshing watermelon flavor with energy boost',
     color: 'bg-red-100',
-    image: '/lovable-uploads/87a9d84f-5bea-43c5-bb5b-e9940bb0bfcb.png',
+    image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901',
     price: 2.99
   },
   {
@@ -34,7 +35,7 @@ const productData: Product[] = [
     name: 'SWAY Lemon Lime',
     description: 'Zesty lemon lime flavor for refreshing energy',
     color: 'bg-green-100',
-    image: '/lovable-uploads/d48e6b21-5040-4ac1-bdec-e522951d94c1.png',
+    image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9',
     price: 2.99
   },
   {
@@ -42,7 +43,7 @@ const productData: Product[] = [
     name: 'SWAY Mango',
     description: 'Tropical mango flavor with natural energy',
     color: 'bg-yellow-100',
-    image: '/lovable-uploads/38a97a84-1401-4821-92ae-de1c31db4ffb.png',
+    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
     price: 2.99
   },
   {
@@ -50,7 +51,7 @@ const productData: Product[] = [
     name: 'SWAY Orange',
     description: 'Citrus orange flavor for daily energy boost',
     color: 'bg-orange-100',
-    image: '/lovable-uploads/9b2df696-40a9-4ded-8867-86c461eb3b72.png',
+    image: 'https://images.unsplash.com/photo-1582979512210-99b6a53386f9',
     price: 2.99
   },
   {
@@ -58,7 +59,7 @@ const productData: Product[] = [
     name: 'SWAY Passion Fruit',
     description: 'Exotic passion fruit flavor with immunity support',
     color: 'bg-purple-100',
-    image: '/lovable-uploads/b3a0b83d-4f12-4602-9bae-e4a6958361a4.png',
+    image: 'https://images.unsplash.com/photo-1546548970-71785318a17b',
     price: 2.99
   }
 ];
