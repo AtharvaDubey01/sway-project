@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart, CheckCircle } from 'lucide-react';
@@ -73,7 +72,6 @@ const Products = () => {
   const [addedToCart, setAddedToCart] = useState<{[key: number]: boolean}>({});
   const { toast } = useToast();
 
-  // Load cart from localStorage on component mount
   useEffect(() => {
     const storedCart = localStorage.getItem('cart');
     if (storedCart) {
@@ -86,53 +84,43 @@ const Products = () => {
     }
   }, []);
 
-  // Save cart to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
     
-    // Update cart count in navbar via custom event
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
     const event = new CustomEvent('cart-updated', { detail: { count: cartCount } });
     window.dispatchEvent(event);
   }, [cart]);
 
   const addToCart = (product: Product) => {
-    // Create a copy of the product to avoid reference issues
     const productToAdd = {...product};
     
     setCart(prevCart => {
-      // Check if product already exists in cart
       const exists = prevCart.find(item => item.id === productToAdd.id);
       
       if (exists) {
-        // Increase quantity if already in cart
         return prevCart.map(item => 
           item.id === productToAdd.id 
             ? { ...item, quantity: item.quantity + 1 } 
             : item
         );
       } else {
-        // Add new product to cart
         return [...prevCart, { ...productToAdd, quantity: 1 }];
       }
     });
 
-    // Show success animation for this product
     setAddedToCart(prevState => ({...prevState, [product.id]: true}));
     
-    // Reset success animation after 1.5 seconds
     setTimeout(() => {
       setAddedToCart(prevState => ({...prevState, [product.id]: false}));
     }, 1500);
 
-    // Show toast notification
     toast({
       title: "Added to cart!",
       description: `${product.name} has been added to your cart.`,
     });
   };
 
-  // Calculate total number of items in cart
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
@@ -180,10 +168,6 @@ const Products = () => {
               </Button>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <Button variant="outline" className="btn-outline text-lg py-6 px-8">View All Flavors</Button>
         </div>
       </div>
     </section>
