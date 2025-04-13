@@ -1,3 +1,4 @@
+
 import React from 'react';
 const Story = () => {
   return <section id="story" className="section bg-navy text-white">
@@ -18,7 +19,11 @@ const Story = () => {
               drinks that are as good for you as they taste.
             </p>
             <div className="flex items-center gap-6 mt-8">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop" alt="Founder" className="w-16 h-16 rounded-full object-cover border-2 border-coral" />
+              <img 
+                src="/lovable-uploads/a9d7fd53-1036-44cc-9c1b-7420a40b9836.png" 
+                alt="Founder" 
+                className="w-16 h-16 rounded-full object-cover border-2 border-coral" 
+              />
               <div>
                 <h4 className="font-bold">Atharva U. Dubey</h4>
                 <p className="text-sm text-white/70">Founder & CEO</p>
