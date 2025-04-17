@@ -1,13 +1,11 @@
 import React from 'react';
 import { Leaf, Droplets, CheckCircle } from 'lucide-react';
-
 const LearnMore = () => {
-  return (
-    <section id="learn-more" className="section bg-white py-16 md:py-24">
+  return <section id="learn-more" className="section bg-white py-16 md:py-24">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Refresh?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Sway?</h2>
             
             <div className="space-y-6">
               <div className="flex items-start">
@@ -53,34 +51,16 @@ const LearnMore = () => {
           
           <div className="order-1 md:order-2 grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <img 
-                src="/lovable-uploads/can factory.jpg" 
-                alt="Can Factory" 
-                className="rounded-2xl shadow-lg h-64 w-full object-cover"
-              />
-              <img 
-                src="/lovable-uploads/no sugar.jpg" 
-                alt="No Sugar" 
-                className="rounded-2xl shadow-lg h-48 w-full object-cover"
-              />
+              <img src="/lovable-uploads/can factory.jpg" alt="Can Factory" className="rounded-2xl shadow-lg h-64 w-full object-cover" />
+              <img src="/lovable-uploads/no sugar.jpg" alt="No Sugar" className="rounded-2xl shadow-lg h-48 w-full object-cover" />
             </div>
             <div className="space-y-4 mt-8">
-              <img 
-                src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?q=80&w=1472&auto=format&fit=crop" 
-                alt="Zero sugar" 
-                className="rounded-2xl shadow-lg h-48 w-full object-cover"
-              />
-              <img 
-                src="/lovable-uploads/oranges pic.jpg" 
-                alt="Refreshing drinks" 
-                className="rounded-2xl shadow-lg h-64 w-full object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?q=80&w=1472&auto=format&fit=crop" alt="Zero sugar" className="rounded-2xl shadow-lg h-48 w-full object-cover" />
+              <img src="/lovable-uploads/oranges pic.jpg" alt="Refreshing drinks" className="rounded-2xl shadow-lg h-64 w-full object-cover" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default LearnMore;
