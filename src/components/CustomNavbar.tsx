@@ -9,7 +9,7 @@ const CustomNavbar = () => {
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="nav-link">Home</Link>
+          
           <a href="/#products" className="nav-link">Products</a>
           <a href="/#benefits" className="nav-link">Benefits</a>
           <a href="/#story" className="nav-link">Our Story</a>
