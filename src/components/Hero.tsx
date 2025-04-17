@@ -46,6 +46,13 @@ const customerReviews = [
 ];
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden">
       <div className="container-custom">
@@ -58,16 +65,19 @@ const Hero = () => {
               Zero sugar. Full of flavor. Immunity boosting energy drinks that keep you going all day long.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Link to="/#products">
-                <Button className="btn-primary text-lg py-6 px-8 bg-[#F97316] hover:bg-[#F97316]/90 transition-all duration-300 shadow-lg">
-                  Shop Now
-                </Button>
-              </Link>
-              <Link to="/#benefits">
-                <Button variant="outline" className="btn-outline text-lg py-6 px-8 border-2 bg-[#F2FCE2] text-dark border-[#84cc16] hover:bg-[#84cc16]/20 transition-all duration-300">
-                  Learn More
-                </Button>
-              </Link>
+              <Button 
+                onClick={() => scrollToSection('products')} 
+                className="btn-primary text-lg py-6 px-8 bg-[#F97316] hover:bg-[#F97316]/90 transition-all duration-300 shadow-lg"
+              >
+                Shop Now
+              </Button>
+              <Button 
+                onClick={() => scrollToSection('benefits')} 
+                variant="outline" 
+                className="btn-outline text-lg py-6 px-8 border-2 bg-[#F2FCE2] text-dark border-[#84cc16] hover:bg-[#84cc16]/20 transition-all duration-300"
+              >
+                Learn More
+              </Button>
             </div>
             
             <div className="mt-8">
@@ -105,9 +115,12 @@ const Hero = () => {
                   <p className="text-sm text-gray-600">
                     <span className="font-bold">500+</span> 5-star reviews
                   </p>
-                  <Link to="/#reviews" className="text-sm text-coral font-medium flex items-center hover:underline transition-all">
+                  <button 
+                    onClick={() => scrollToSection('reviews')} 
+                    className="text-sm text-coral font-medium flex items-center hover:underline transition-all"
+                  >
                     View All Reviews <ChevronRight className="h-4 w-4 ml-1" />
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
