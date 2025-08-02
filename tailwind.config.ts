@@ -111,6 +111,10 @@ export default {
 				'float': 'float 5s ease-in-out infinite',
 				'slide-up': 'slide-up 0.7s ease-out',
 				'slide-down': 'slide-down 0.7s ease-out',
+				'ripple': 'ripple 2s ease-out infinite',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			},
 			fontFamily: {
 				display: ['var(--font-cabinet-grotesk)', 'sans-serif'],
