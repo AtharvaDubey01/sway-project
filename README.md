@@ -36,12 +36,6 @@ SWAY is a modern, responsive web project showcasing a clean, health-oriented bev
 └── index.css # Global styles (includes hover effects)
 └── index.js # Entry point
 
-yaml
-Copy
-Edit
-
----
-
 ## 🖼️ Image Hover Effect
 
 All images in the "Philosophy" section use this CSS:
@@ -59,22 +53,13 @@ All images in the "Philosophy" section use this CSS:
 🚀 Getting Started (Local Setup)
 Clone the repository
 
-bash
-Copy
-Edit
 git clone https://github.com/your-username/sway-project.git
 cd sway-project
 Install dependencies (if React is used)
 
-bash
-Copy
-Edit
 npm install
 Run the app locally
 
-bash
-Copy
-Edit
 npm start
 📦 Deployment
 Deployed using Vercel:
@@ -95,9 +80,3 @@ MIT
 
 👤 Author
 Atharva Dubey
-📧 Contact Me
-🌐 LinkedIn
-
-
-
-ChatGPT can make mistakes. Check important info. See Cookie Preferences.
