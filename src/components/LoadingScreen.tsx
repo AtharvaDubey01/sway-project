@@ -24,7 +24,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center">
+    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex flex-col items-center justify-center">
       <div className="max-w-2xl w-full px-8 text-center">
         {/* Progress counter */}
         <div className="text-white/60 text-lg font-light mb-4 font-inter">
