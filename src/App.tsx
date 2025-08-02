@@ -1,9 +1,11 @@
 
+import React, { useState } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoadingScreen from "@/components/LoadingScreen";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CartPage from "./pages/Cart";
@@ -11,6 +13,16 @@ import CartPage from "./pages/Cart";
 const queryClient = new QueryClient();
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onComplete={handleLoadingComplete} />;
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
