@@ -86,4 +86,21 @@
   .product-image {
     @apply mx-auto w-32 md:w-48 animate-float;
   }
+
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
+
+  .pause-marquee {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }

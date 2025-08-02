@@ -1,13 +1,6 @@
 
 import React from 'react';
 import { Star, User } from 'lucide-react';
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
-} from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 
 const reviewsData = [
@@ -73,11 +66,12 @@ const Reviews = () => {
           </p>
         </div>
 
-        <Carousel className="w-full max-w-5xl mx-auto">
-          <CarouselContent>
+        <div className="relative overflow-hidden">
+          <div className="flex animate-marquee hover:pause-marquee">
+            {/* First set of reviews */}
             {reviewsData.map((review) => (
-              <CarouselItem key={review.id} className="md:basis-1/2 lg:basis-1/3 p-2">
-                <Card className="border-none shadow-md h-full">
+              <div key={review.id} className="flex-shrink-0 w-80 mx-4">
+                <Card className="border-none shadow-md h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-coral">
@@ -104,14 +98,42 @@ const Reviews = () => {
                     <p className="text-gray-700 flex-grow">"{review.text}"</p>
                   </CardContent>
                 </Card>
-              </CarouselItem>
+              </div>
             ))}
-          </CarouselContent>
-          <div className="flex justify-center mt-8">
-            <CarouselPrevious className="relative static translate-y-0 left-0 mr-4" />
-            <CarouselNext className="relative static translate-y-0 right-0" />
+            {/* Duplicate set for seamless loop */}
+            {reviewsData.map((review) => (
+              <div key={`${review.id}-duplicate`} className="flex-shrink-0 w-80 mx-4">
+                <Card className="border-none shadow-md h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                  <CardContent className="p-6 flex flex-col h-full">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-coral">
+                        {review.image ? (
+                          <img 
+                            src={review.image} 
+                            alt={review.name} 
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                            <User className="h-6 w-6 text-gray-500" />
+                          </div>
+                        )}
+                      </div>
+                      <div>
+                        <p className="font-bold">{review.name}</p>
+                        <p className="text-sm text-gray-500">{review.location}</p>
+                      </div>
+                    </div>
+                    <div className="flex mb-3">
+                      {renderStars(review.rating)}
+                    </div>
+                    <p className="text-gray-700 flex-grow">"{review.text}"</p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
           </div>
-        </Carousel>
+        </div>
       </div>
     </section>
   );
