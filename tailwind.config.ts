@@ -104,6 +104,62 @@ export default {
 					'0%': { transform: 'translateY(-100%)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' },
 				},
+				'liquid-flow': {
+					'0%': { 
+						transform: 'translateX(-100%) translateY(100%) rotate(45deg) scale(0)',
+						borderRadius: '50% 70% 60% 80%'
+					},
+					'50%': { 
+						transform: 'translateX(0%) translateY(0%) rotate(180deg) scale(1.2)',
+						borderRadius: '80% 50% 70% 60%'
+					},
+					'100%': { 
+						transform: 'translateX(100%) translateY(-100%) rotate(315deg) scale(0)',
+						borderRadius: '60% 80% 50% 70%'
+					}
+				},
+				'liquid-flow-reverse': {
+					'0%': { 
+						transform: 'translateX(100%) translateY(-100%) rotate(-45deg) scale(0)',
+						borderRadius: '70% 60% 80% 50%'
+					},
+					'50%': { 
+						transform: 'translateX(0%) translateY(0%) rotate(-180deg) scale(1.2)',
+						borderRadius: '50% 80% 60% 70%'
+					},
+					'100%': { 
+						transform: 'translateX(-100%) translateY(100%) rotate(-315deg) scale(0)',
+						borderRadius: '80% 50% 70% 60%'
+					}
+				},
+				'liquid-flow-slow': {
+					'0%': { 
+						transform: 'translateX(-50%) translateY(150%) rotate(90deg) scale(0)',
+						borderRadius: '60% 70% 50% 80%'
+					},
+					'50%': { 
+						transform: 'translateX(50%) translateY(-50%) rotate(270deg) scale(1.3)',
+						borderRadius: '80% 60% 70% 50%'
+					},
+					'100%': { 
+						transform: 'translateX(150%) translateY(-150%) rotate(450deg) scale(0)',
+						borderRadius: '50% 80% 60% 70%'
+					}
+				},
+				'liquid-flow-fast': {
+					'0%': { 
+						transform: 'translateX(150%) translateY(-50%) rotate(135deg) scale(0)',
+						borderRadius: '70% 50% 80% 60%'
+					},
+					'50%': { 
+						transform: 'translateX(-50%) translateY(50%) rotate(315deg) scale(1.1)',
+						borderRadius: '60% 80% 50% 70%'
+					},
+					'100%': { 
+						transform: 'translateX(-150%) translateY(150%) rotate(495deg) scale(0)',
+						borderRadius: '80% 60% 70% 50%'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -111,6 +167,10 @@ export default {
 				'float': 'float 5s ease-in-out infinite',
 				'slide-up': 'slide-up 0.7s ease-out',
 				'slide-down': 'slide-down 0.7s ease-out',
+				'liquid-flow': 'liquid-flow 2s ease-in-out infinite',
+				'liquid-flow-reverse': 'liquid-flow-reverse 2.5s ease-in-out infinite',
+				'liquid-flow-slow': 'liquid-flow-slow 3s ease-in-out infinite',
+				'liquid-flow-fast': 'liquid-flow-fast 1.5s ease-in-out infinite',
 			},
 			fontFamily: {
 				display: ['var(--font-cabinet-grotesk)', 'sans-serif'],
