@@ -1,82 +1,73 @@
-# SWAY - Philosophy Website 🌿
+# Welcome to your Lovable project
 
-[Live Demo 🚀](https://sway-project.vercel.app)
+## Project info
 
-SWAY is a modern, responsive web project showcasing a clean, health-oriented beverage brand philosophy. The site emphasizes three key principles: **Natural Ingredients**, **Zero Sugar**, and **Sustainable Packaging** — visually supported by hover-reactive imagery.
+**URL**: https://lovable.dev/projects/fb27db5f-8695-4d4f-9a2a-f42e6d67b549
 
----
+## How can I edit this code?
 
-## 🧠 Features
+There are several ways of editing your application.
 
-- ✨ Clean and modern UI
-- 🖼️ Image hover effects (black & white to color)
-- 📱 Fully responsive (mobile-friendly)
-- ♻️ Sustainable brand-focused layout
-- 🚀 Hosted on Vercel
+**Use Lovable**
 
----
+Simply visit the [Lovable Project](https://lovable.dev/projects/fb27db5f-8695-4d4f-9a2a-f42e6d67b549) and start prompting.
 
-## 🔧 Tech Stack
+Changes made via Lovable will be committed automatically to this repo.
 
-- **HTML5**
-- **CSS3**
-- **JavaScript** (if used)
-- **React** (if applicable)
-- **Vercel** (for deployment)
+**Use your preferred IDE**
 
----
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-## 📁 Folder Structure
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-/public
-└── images/ # All static image assets
-/src
-└── components/ # Reusable UI components
-└── App.js # Main application component
-└── index.css # Global styles (includes hover effects)
-└── index.js # Entry point
+Follow these steps:
 
-## 🖼️ Image Hover Effect
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-All images in the "Philosophy" section use this CSS:
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-```css
-.image-hover-effect {
-  filter: grayscale(100%);
-  transition: filter 0.4s ease-in-out;
-  border-radius: 12px;
-}
+# Step 3: Install the necessary dependencies.
+npm i
 
-.image-hover-effect:hover {
-  filter: grayscale(0%);
-}
-🚀 Getting Started (Local Setup)
-Clone the repository
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
 
-git clone https://github.com/your-username/sway-project.git
-cd sway-project
-Install dependencies (if React is used)
+**Edit a file directly in GitHub**
 
-npm install
-Run the app locally
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-npm start
-📦 Deployment
-Deployed using Vercel:
+**Use GitHub Codespaces**
 
-Connect the GitHub repo
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-Select project root
+## What technologies are used for this project?
 
-Choose build command (npm run build) and output directory (dist or build)
+This project is built with:
 
-Deploy 🎉
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-🧑‍💻 Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
+## How can I deploy this project?
 
-📜 License
-MIT
+Simply open [Lovable](https://lovable.dev/projects/fb27db5f-8695-4d4f-9a2a-f42e6d67b549) and click on Share -> Publish.
 
-👤 Author
-Atharva Dubey
+## Can I connect a custom domain to my Lovable project?
+
+Yes it is!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

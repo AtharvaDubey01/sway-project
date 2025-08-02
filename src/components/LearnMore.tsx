@@ -51,31 +51,27 @@ const LearnMore = () => {
           
           <div className="order-1 md:order-2 grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div className="relative group rounded-2xl overflow-hidden shadow-lg h-64">
-                <img src="/lovable-uploads/can factory.jpg" alt="Can Factory" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 liquid-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="liquid-blob animate-liquid-flow"></div>
-                </div>
+              <div className="relative rounded-2xl shadow-lg h-64 w-full overflow-hidden group">
+                <img src="/lovable-uploads/can factory.jpg" alt="Can Factory" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-transparent to-blue-600/40 opacity-0 group-hover:opacity-100 transition-all duration-700 water-effect"></div>
+                <div className="absolute inset-0 bg-gradient-radial from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-ripple"></div>
               </div>
-              <div className="relative group rounded-2xl overflow-hidden shadow-lg h-48">
-                <img src="/lovable-uploads/no sugar.jpg" alt="No Sugar" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 liquid-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="liquid-blob animate-liquid-flow-reverse"></div>
-                </div>
+              <div className="relative rounded-2xl shadow-lg h-48 w-full overflow-hidden group">
+                <img src="/lovable-uploads/no sugar.jpg" alt="No Sugar" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-transparent to-blue-600/40 opacity-0 group-hover:opacity-100 transition-all duration-700 water-effect"></div>
+                <div className="absolute inset-0 bg-gradient-radial from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-ripple"></div>
               </div>
             </div>
             <div className="space-y-4 mt-8">
-              <div className="relative group rounded-2xl overflow-hidden shadow-lg h-48">
-                <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?q=80&w=1472&auto=format&fit=crop" alt="Zero sugar" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 liquid-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="liquid-blob animate-liquid-flow-slow"></div>
-                </div>
+              <div className="relative rounded-2xl shadow-lg h-48 w-full overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?q=80&w=1472&auto=format&fit=crop" alt="Zero sugar" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-transparent to-blue-600/40 opacity-0 group-hover:opacity-100 transition-all duration-700 water-effect"></div>
+                <div className="absolute inset-0 bg-gradient-radial from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-ripple"></div>
               </div>
-              <div className="relative group rounded-2xl overflow-hidden shadow-lg h-64">
-                <img src="/lovable-uploads/oranges pic.jpg" alt="Refreshing drinks" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 liquid-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="liquid-blob animate-liquid-flow-fast"></div>
-                </div>
+              <div className="relative rounded-2xl shadow-lg h-64 w-full overflow-hidden group">
+                <img src="/lovable-uploads/oranges pic.jpg" alt="Refreshing drinks" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-transparent to-blue-600/40 opacity-0 group-hover:opacity-100 transition-all duration-700 water-effect"></div>
+                <div className="absolute inset-0 bg-gradient-radial from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-ripple"></div>
               </div>
             </div>
           </div>
