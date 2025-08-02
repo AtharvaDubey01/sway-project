@@ -103,44 +103,4 @@
       transform: translateX(-50%);
     }
   }
-
-  @keyframes ripple {
-    0% {
-      transform: scale(0.8) rotate(0deg);
-      opacity: 0.8;
-    }
-    50% {
-      transform: scale(1.2) rotate(180deg);
-      opacity: 0.6;
-    }
-    100% {
-      transform: scale(1.5) rotate(360deg);
-      opacity: 0;
-    }
-  }
-
-  .water-effect {
-    background: linear-gradient(
-      45deg,
-      rgba(59, 130, 246, 0.3) 0%,
-      rgba(147, 197, 253, 0.2) 25%,
-      rgba(191, 219, 254, 0.1) 50%,
-      rgba(59, 130, 246, 0.2) 75%,
-      rgba(37, 99, 235, 0.3) 100%
-    );
-    background-size: 400% 400%;
-    animation: water-flow 3s ease-in-out infinite;
-  }
-
-  @keyframes water-flow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 }
