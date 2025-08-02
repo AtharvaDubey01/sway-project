@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+# SWAY - Philosophy Website 🌿
 
-## Project info
+[Live Demo 🚀](https://sway-project.vercel.app)
 
-**URL**: https://lovable.dev/projects/fb27db5f-8695-4d4f-9a2a-f42e6d67b549
+SWAY is a modern, responsive web project showcasing a clean, health-oriented beverage brand philosophy. The site emphasizes three key principles: **Natural Ingredients**, **Zero Sugar**, and **Sustainable Packaging** — visually supported by hover-reactive imagery.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧠 Features
 
-**Use Lovable**
+- ✨ Clean and modern UI
+- 🖼️ Image hover effects (black & white to color)
+- 📱 Fully responsive (mobile-friendly)
+- ♻️ Sustainable brand-focused layout
+- 🚀 Hosted on Vercel
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fb27db5f-8695-4d4f-9a2a-f42e6d67b549) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🔧 Tech Stack
 
-**Use your preferred IDE**
+- **HTML5**
+- **CSS3**
+- **JavaScript** (if used)
+- **React** (if applicable)
+- **Vercel** (for deployment)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📁 Folder Structure
 
-Follow these steps:
+/public
+└── images/ # All static image assets
+/src
+└── components/ # Reusable UI components
+└── App.js # Main application component
+└── index.css # Global styles (includes hover effects)
+└── index.js # Entry point
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+yaml
+Copy
+Edit
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🖼️ Image Hover Effect
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+All images in the "Philosophy" section use this CSS:
 
-**Edit a file directly in GitHub**
+```css
+.image-hover-effect {
+  filter: grayscale(100%);
+  transition: filter 0.4s ease-in-out;
+  border-radius: 12px;
+}
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+.image-hover-effect:hover {
+  filter: grayscale(0%);
+}
+🚀 Getting Started (Local Setup)
+Clone the repository
 
-**Use GitHub Codespaces**
+bash
+Copy
+Edit
+git clone https://github.com/your-username/sway-project.git
+cd sway-project
+Install dependencies (if React is used)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+bash
+Copy
+Edit
+npm install
+Run the app locally
 
-## What technologies are used for this project?
+bash
+Copy
+Edit
+npm start
+📦 Deployment
+Deployed using Vercel:
 
-This project is built with:
+Connect the GitHub repo
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Select project root
 
-## How can I deploy this project?
+Choose build command (npm run build) and output directory (dist or build)
 
-Simply open [Lovable](https://lovable.dev/projects/fb27db5f-8695-4d4f-9a2a-f42e6d67b549) and click on Share -> Publish.
+Deploy 🎉
 
-## Can I connect a custom domain to my Lovable project?
+🧑‍💻 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
 
-Yes it is!
+📜 License
+MIT
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+👤 Author
+Atharva Dubey
+📧 Contact Me
+🌐 LinkedIn
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+
+ChatGPT can make mistakes. Check important info. See Cookie Preferences.
